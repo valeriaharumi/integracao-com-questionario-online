@@ -1,0 +1,43 @@
+.header {
+    /*container do cabeçalho*/
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 5px rgb(84, 84, 84);
+    margin: 3px 0;
+}
+
+.header a {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.header #link-brand {
+    font-family: 'Open Sans Extra-bold';
+}
+
+.global-menu {
+    padding: 20px 0;
+    display: flex;
+    align-items: flex-end;
+    align-content: space-around;
+}
+
+.global-menu a {
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 80px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.global-menu a:hover {
+    text-decoration: none;
+    border: 1px solid hsl(163, 60%, 47%);
+    background: rgb(48, 191, 151);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.global-menu .login {
+    border: 1px solid rgb(48, 191, 151);
+    border-radius: 10px;
+}
