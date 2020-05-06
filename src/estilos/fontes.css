@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'open sans bold';
+    src: url('../assets/fonts/opensans-bold-webfont.woff2') format('woff2'), url('../assets/fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Extra-bold';
+    src: url('../assets/fonts/opensans-extrabold-webfont.woff2') format('woff2'), url('../assets/fonts/opensans-extrabold-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Semi-bold';
+    src: url('../assets/fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../assets/fonts/opensans-semibold-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}

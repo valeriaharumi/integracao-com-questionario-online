@@ -1,4 +1,5 @@
 import React from 'react'
+import '../estilos/fontes.css'
 
 const footer = {
     marginTop: '25px',
@@ -7,7 +8,7 @@ const footer = {
     background: 'rgb(255, 255, 255)',
     color: 'rgb(0, 0, 0)',
     textAlign: 'center',
-    fontFamily: 'Open Sans bold',
+    fontFamily: 'open sans bold',
     fontSize: '16px'
 }
 
