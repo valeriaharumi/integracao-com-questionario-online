@@ -8,6 +8,7 @@ const elemento = document.getElementById('root')
 ReactDOM.render(
   <div>    
     <Header/>
+    
     <Footer/>
   </div>  
   

@@ -1,20 +1,21 @@
 import React from 'react'
 import '../estilos/estiloHeader.css'
+import '../assets/bootstrap/bootstrap.min.css'
 
 function Header() {
     return (
-        <div>
+        <div className='header'>
             <nav className='navbar navbar-expand-lg'>
                 <div className='container'>
                     {/*Logo da equipe do lado esquerdo*/}
                     {/*link para pag home*/}
-                    <a id="link-brand" className="navbar-brand" href="index.html">4-Front</a>
+                    <a id="link-brand" className="navbar-brand" href="index.js">4-Front</a>
 
                     {/*Menu de navegação*/}
                     <div className="global-menu">
                         <a href='#'>Home</a>                        
                         <a href='#'>Sobre</a>                        
-                        <a href='#'>Login</a>                        
+                        <a className='login' href='#'>Login</a>                        
                     </div>
                 </div>
             </nav>
