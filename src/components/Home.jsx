@@ -16,6 +16,8 @@ const home = () => {
 
 
                 <h2 >Novo Cadastro</h2>
+
+                    <hr></hr>
                 
                     <div className="message"></div>
                     <div className="message"></div>

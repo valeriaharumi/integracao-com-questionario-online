@@ -74,7 +74,7 @@ const HomeCadastro = () => {
 
                 <label htmlFor="subject">Assunto</label>
                 <select name="subject" id="subject" className="form-control">
-                    <option value="" disabled defaultValue>Selecione um assunto</option>
+                    <option value="" disabled selected>Selecione um assunto</option>
                     <option value="assunto1">Assunto 1</option>
                     <option value="assunto2">Assunto 2</option>
                 </select>
