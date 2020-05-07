@@ -10,6 +10,10 @@
     color: rgb(0, 0, 0);
 }
 
+.header a:hover {
+    color: rgb(0, 0, 0);
+}
+
 .header #link-brand {
     font-family: 'Open Sans Extra-bold';
 }
