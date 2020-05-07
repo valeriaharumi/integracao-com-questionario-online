@@ -3,8 +3,7 @@ import '../css/home.css';
 
 
 const HomeCadastro = () => {
-    return <div>
-        <div className="col-sm-12 col-md-12 col-lg-6">
+    return <div className="col-sm-12 col-md-12 col-lg-6">
             <div className="form--content form-group">
 
                 {/* <!-- ----------------------------------------------------------------------------------------------------------------
@@ -13,10 +12,10 @@ const HomeCadastro = () => {
                 <label htmlFor="name">Nome:</label>
                 <input className="form-control"
                     type="text"
-                    name="name" id="name" minlength="3" placeholder="João da Silva" required>
+                    name="name" id="name" minLength="3" placeholder="João da Silva" required>
                 </input>
 
-                <div className="alert alert-danger">
+                {/* <div className="alert alert-danger">
 
 
 
@@ -27,7 +26,7 @@ const HomeCadastro = () => {
                     <div>
                         O nome deve ter no mínimo 3 caracteres.
                                                 </div>
-                </div>
+                </div> */}
                 {/* ----------------------------------------------------------------------------------------------------------------
                                     Area do email
         --------------------------------------------------------------------------------------------------------------- */}
@@ -40,14 +39,14 @@ const HomeCadastro = () => {
                 </input>
 
 
-                <div className="alert alert-danger">
+                {/* <div className="alert alert-danger">
                     <div >
                         O campo "email" precisa ser preenchido.
                                                         </div>
                     <div >
                         Digite um formato correto para email.
                                                         </div>
-                </div>
+                </div> */}
 
                 {/* ----------------------------------------------------------------------------------------------------------------
                                     Area do telefone
@@ -56,17 +55,17 @@ const HomeCadastro = () => {
                 <label htmlFor="phone">Telefone:</label>
                 <input className="form-control" type="tel"
                     name="phone" id="phone" placeholder="(99) 99999-9999" title="Preencha o telefone" required="required"
-                    minlength="10" mask="(00) 00000-0000">
+                    minLength="10" mask="(00) 00000-0000">
                 </input>
 
 
-                <div className="alert alert-danger">
+                {/* <div className="alert alert-danger">
                     O campo "Telefone" precisa ser preenchido.
                                             </div>
 
                 <div className="alert alert-danger">
                     Digite um formato correto para telefone.
-                                            </div>
+                                            </div> */}
 
 
                 {/* ----------------------------------------------------------------------------------------------------------------
@@ -75,7 +74,7 @@ const HomeCadastro = () => {
 
                 <label htmlFor="subject">Assunto</label>
                 <select name="subject" id="subject" className="form-control">
-                    <option value="" disabled selected>Selecione um assunto</option>
+                    <option value="" disabled defaultValue>Selecione um assunto</option>
                     <option value="assunto1">Assunto 1</option>
                     <option value="assunto2">Assunto 2</option>
                 </select>
@@ -86,13 +85,16 @@ const HomeCadastro = () => {
 
                 <label htmlFor="msgContent">Conteúdo:</label>
                 <textarea name="msgContent" id="msgContent" rows="8"
-                    className="form-control" maxlength="500" placeholder="Digite aqui sua mensagem">
+                    className="form-control" maxLength="500" placeholder="Digite aqui sua mensagem">
                 </textarea>
+
+
+                
             </div>
         </div>
 
 
-    </div>
+    
 
 }
 

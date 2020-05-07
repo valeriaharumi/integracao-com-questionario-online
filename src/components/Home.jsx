@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../css/home.css';
+import '../assets/bootstrap/bootstrap.min.css'
 import HomeCadastro from './home-cadastro';
 import HomeInformacoes from './home-informacoes';
 
@@ -10,35 +11,35 @@ import HomeInformacoes from './home-informacoes';
 const home = () => {
     return <div id="page">
 
-                <div className="container">
-                    <div className="main--content">
-
-                    
-                        <h2 >Novo Cadastro</h2>
-                        
-                            <div className="message"></div>
-                            <div className="message"></div>
+        <div className="container">
+            <div className="main--content">
 
 
-                            <form name="form-Index" id="form-Index" >
+                <h2 >Novo Cadastro</h2>
+                
+                    <div className="message"></div>
+                    <div className="message"></div>
 
 
-                                <div id="formSend">
+                    <form name="form-Index" id="form-Index" >
+                    <div className="row">
+
+                        {/* <div id="formSend">
                                     Seu cadastro foi enviado.<br />
                                 Obrigado!
-                                </div>
+                                </div> */}
 
+                        <HomeCadastro></HomeCadastro>
 
-                                <div className="row">
-                                <HomeCadastro></HomeCadastro>
-                                <HomeInformacoes></HomeInformacoes>
-    
-                                </div>
-                            </form>
-                        
-                    </div>
-                </div>
-         </div>
+                        <HomeInformacoes></HomeInformacoes>
+
+                        </div>
+                    </form>
+                
+
+            </div>
+        </div>
+    </div>
 
 }
 
