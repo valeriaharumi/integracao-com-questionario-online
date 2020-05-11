@@ -3,6 +3,8 @@ import React from 'react'
 import '../css/sobre.css';
 import '../assets/bootstrap/bootstrap.min.css'
 
+import foto from '../assets/img/foto.png';
+
 
 
 function Sobre() {
@@ -16,18 +18,9 @@ function Sobre() {
                     <h1>Sobre</h1>
                 </div>
                 <div className="content__principal--text text-center">
-                    <p>Somos a 4-Front! Uma equipe composta por cinco integrantes que estão em busca de novos
-                        conhecimentos e desafios profissionais.
+                    <p>COLOCAR INFORMAÇÕES AQUI
                     </p>
-                    <p> Cada integrante tem suas habilidades e áreas de especialidade, e unidos formamos um time
-                        capacitado
-                        para desenvolvimento web completo,
-                        contemplando desde o design da interface até toda a programação Front-End.
-                    </p>
-                    <p>
-                        Fazemos aplicação de HTML, CSS e JavaScript puros ou
-                        com os frameworks Bootstrap, Angular e React
-                    </p>
+
                 </div>
             </section>
             {/* <!-- FIM SESSÃO-SOBRE --> */}
@@ -45,38 +38,13 @@ function Sobre() {
 
                         <div className="col-sm-auto col-md-auto">
                             <div className="team-member">
-                                <img className="mx-auto rounded-circle" src="./assets/img/foto.png"
+                                <img className="mx-auto rounded-circle" src={foto}
                                     alt=""/>
-                                <h4>Mirela De Giuli</h4>
-                                <div className="contact-members">
-                                    <a href="mailto:mireladegiuli@gmail.com"> <i className="fas fa-at"></i></a>
-                                    <a href="https://github.com/mirelagiuli" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="https://br.linkedin.com/in/mirela-de-giuli" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-auto col-md-auto">
-                            <div className="team-member">
-                                <img className="mx-auto rounded-circle" src="../../assets/media/images/team/avatar.png"
-                                    alt=""/>
-                                <h4>Rafael Rodrigues</h4>
-                                <div className="contact-members">
-                                    <a href="mailto:rafaelrodrigues_@outlook.com"> <i className="fas fa-at"></i></a>
-                                    <a href="https://github.com/rafael-rodrigues-santos" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="https://www.linkedin.com/in/rafael-rodrigues-santos/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-auto col-md-auto">
-                            <div className="team-member">
-                                <img className="mx-auto rounded-circle" src="../../assets/media/images/team/avatar.png"
-                                    alt=" "/>
-                                <h4>Thiago Dutra</h4>
+                                <h4>Benicio</h4>
+                                
                                 <div className="contact-members">
                                     <a href="#"> <i className="fas fa-at"></i></a>
-                                    <a href="https://github.com/thiagosilvadtr" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                                     <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
                                 </div>
                             </div>
@@ -84,22 +52,48 @@ function Sobre() {
 
                         <div className="col-sm-auto col-md-auto">
                             <div className="team-member">
-                                <img className="mx-auto rounded-circle" src="../../assets/media/images/team/avatar.png"
+                                <img className="mx-auto rounded-circle" src={foto}
                                     alt=""/>
-                                <h4>Pedro Henrique</h4>
+                                <h4>Carlos</h4>
                                 <div className="contact-members">
-                                    <a href="mailto:pedrohenriquer77@hotmail.com"> <i className="fas fa-at"></i></a>
-                                    <a href="https://github.com/pedrohrb7" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="https://www.linkedin.com/in/pedrohrb/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                                    <a href="#"> <i className="fas fa-at"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-sm-auto col-md-auto">
                             <div className="team-member">
-                                <img className="mx-auto rounded-circle" src="../../assets/media/images/team/avatar.png"
+                                <img className="mx-auto rounded-circle" src={foto}
                                     alt=" "/>
-                                <h4>Renan Motta</h4>
+                                <h4>Fabricio</h4>
+                                <div className="contact-members">
+                                    <a href="#"> <i className="fas fa-at"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-auto col-md-auto">
+                            <div className="team-member">
+                                <img className="mx-auto rounded-circle" src={foto}
+                                    alt=""/>
+                                <h4>Valeria</h4>
+                                <div className="contact-members">
+                                    <a href="#"> <i className="fas fa-at"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-auto col-md-auto">
+                            <div className="team-member">
+                                <img className="mx-auto rounded-circle" src={foto}
+                                    alt=" "/>
+                                <h4>Wesley</h4>
                                 <div className="contact-members">
                                     <a href="#"> <i className="fas fa-at"></i></a>
                                     <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
