@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 import '../css/home.css';
 import '../assets/bootstrap/bootstrap.min.css'
@@ -6,7 +7,16 @@ import '../assets/bootstrap/bootstrap.min.css'
 
 const Home = () => {
 
+    // Variavel de apoio para mudar o comportamento depois do envio do formulário
+    let enviado = false;
 
+    // Faz o chamado post passando como body os dados preenchidos na tabela
+    const postData = (body) => {
+         axios.post("https://api.airtable.com/v0/appYtQmjCS4p0n2dY/Question%C3%A1rio?api_key=keyfV0AwOq2Pctb5Y", body
+    )
+    }
+
+    // captura as informações do input
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -15,16 +25,83 @@ const Home = () => {
         msgContent: ""
     });
 
+
+    // Quando detecta mudança no input atualiza automaticamente dados da const form 
     function handleChange(event) {
         setForm({
             ...form,
             [event.target.id]: event.target.value
         });
+
+    }
+
+
+    // funcação de apoio para TextDecoderStream, foi criar pra não acionar o submit do form 
+    function clicado() {
+        console.log('clicou', data.records[0].fields)
+        cadastrar()
+    }
+
+    // constante com o conteúdo que será enviado pela API 
+    const data = {
+        "records": [
+            {
+                "fields": {
+                    "Nome": form.name,
+                    "Email": form.email,
+                    "Telefone": form.phone,
+                    "Assunto": form.subject,
+                    "Conteúdo": form.msgContent,
+                    "Forma de contato": "",
+                    "Disponibilidade para contato": ""
+                }
+            }
+        ]
+    }
+
+    // Auxiliar para preenchimento da funçao data, informações opcionais 
+    const auxDisponibilidade = {
+        "Comercial": false,
+        "Manha": false,
+        "Tarde": false,
+        "Noite": false,
+        "Outros": ""
+    }
+
+    // Função acionada quando o formulário e enviado, registra as informações de contato e chama as seguintes 
+    function cadastrar(){
+        let aux = []
+
+        if (auxDisponibilidade["Comercial"]) {
+            aux.push("comercial")
+        }
+        if (auxDisponibilidade["Manha"]) {
+            aux.push("manha")
+        }
+        if (auxDisponibilidade["Tarde"]) {
+            aux.push("tarde")
+        }
+        if (auxDisponibilidade["Noite"]) {
+            aux.push("noite")
+        }
+        if (auxDisponibilidade["Outros"] != "") {
+            aux.push(this.auxDisponibilidade["Outros"]);
+        }
+
+        let disponibilidade = "";
+
+        for (let i = 0; i < aux.length; i++) {
+            disponibilidade += aux[i] + " ";
+        }
+
+        data.records[0].fields["Disponibilidade para contato"] = disponibilidade;
+        enviado = true;
+
     }
 
 
 
-
+// -----------Renderização da página---------------
 
     return <div id="page">
 
@@ -36,6 +113,8 @@ const Home = () => {
 
                 <hr></hr>
 
+
+        {/* Auxilio para teste, será excluido depois  */}
                 <ul>
                     <li>Nome: {form.name}</li>
                     <li>Email: {form.email}</li>
@@ -49,8 +128,8 @@ const Home = () => {
                 <div className="message"></div>
                 <div className="message"></div>
 
-
-                <form name="form-Index" id="form-Index" >
+                <div onClick={clicado}>teste</div>
+                <form name="form-Index" id="form-Index">
                     <div className="row">
 
                         {/* <div id="formSend">
@@ -185,7 +264,7 @@ const Home = () => {
 
                         </div>
 
-{/* --------------------------------- AREA DE INFORMAÇÕES DE CONTATO----------------------- */}
+                        {/* --------------------------------- AREA DE INFORMAÇÕES DE CONTATO----------------------- */}
 
 
                         <div className="col-sm-12 col-md-12 col-lg-6">
@@ -199,8 +278,8 @@ const Home = () => {
 
 
                                 <div className="form-check">
-                                    <input 
-                                    type="radio"
+                                    <input
+                                        type="radio"
                                         name="conta"
                                         id="email-contact"
                                         className="form-check-input"
@@ -281,6 +360,7 @@ const Home = () => {
                                 <button type="submit"
                                     className="btn send--button" >enviar
             </button>
+
                             </div>
 
 
