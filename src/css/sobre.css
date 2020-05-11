@@ -1,0 +1,96 @@
+h4 {
+    font-family: 'Open Sans Semi-bold';
+    color: rgb(84, 84, 84);
+    text-align: center;
+}
+
+p {
+    font-family: 'Open Sans Semi-bold';
+    color: rgb(84, 84, 84);
+    text-align: center;
+}
+
+#page {
+  background: rgb(236, 236, 236);
+  padding: 5%;
+  overflow-x: hidden;
+}
+
+.content--principal {
+    background: rgb(255, 255, 255);
+    border-radius: 13px;
+    margin-bottom: 60px;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 1px rgba(87, 86, 86, 0.466);
+}
+
+.content__principal--title h1, h2{
+    margin: 40px 0 30px 0;
+    font-family: 'Open Sans Bold';
+    font-weight: 400;
+    color: #30BF97;
+    font-size: 30px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.content__principal--text {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Open Sans Semi-bold';
+    color: rgb(84, 84, 84);
+}
+
+
+/**
+    Style da sessao da equipe
+************/
+
+#team .container .members {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.team-member {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-member img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    /* border: 2px solid #000; */
+    box-shadow: 0 0 5px 1px rgb(84, 84, 84);
+}
+
+.team-member h4 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-transform: none;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.team-member .contact-members a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.team-member .contact-members i {
+    margin: 15px 12px;
+    font-size: 28px;
+}
+
+.team-member .contact-members i:hover {
+    color: #30BF97;
+    cursor: pointer;
+}
+
+.desc-projeto{
+    margin: 40px 0;
+    font-size: 14px;
+}
