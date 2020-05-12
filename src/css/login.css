@@ -1,0 +1,115 @@
+h2 {
+    color: rgb(48, 191, 151);
+    font-family: 'Open Sans Bold';
+}
+  
+label {
+font-family: 'Open Sans';
+}
+
+#page {
+background: rgb(236, 236, 236);
+padding: 5%;
+overflow-x: hidden;
+}
+
+.login {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+width: 350px;
+height: 50%;
+background: rgb(255, 255, 255);
+box-shadow: 0px 1px 3px 0px rgb(84, 84, 84);
+border-radius: 13px;
+padding: 10px 0;
+margin: auto;
+}
+
+.login .login__titulo {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin: 0 0 20px 0;
+}
+
+.login .login__titulo h1 {
+font-family: 'open sans bold', sans-serif;
+font-size: 22px;
+color: #30BF97;
+margin: 0;
+text-transform: uppercase;
+}
+
+.login .login__titulo h2 {
+font-family: 'open sans semi-bold', sans-serif;
+font-size: 16px;
+color: #545454;
+margin: 0;
+}
+
+.login .login__form form {
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-direction: column;
+width: 320px;
+height: 200px;
+}
+
+.login .login__form form .login__email,
+.login__password {
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.login .login__form form input {
+border: 1px solid rgb(84, 84, 84);
+width: 250px;
+height: 30px;
+border-radius: 8px;
+outline: none;
+padding: 3px 8px;
+font-family: 'open sans semi-bold', sans-serif;
+font-size: 16px;
+color: rgb(84, 84, 84);
+}
+
+.login .login__form form i {
+font-size: 24px;
+color: rgb(84, 84, 84);
+margin-right: 5px;
+}
+
+.login .login__form form button {
+background: rgb(48, 191, 151);
+color: rgb(255, 255, 255);
+font-family: 'open sans semi-bold', sans-serif;
+font-size: 14px;
+border: none;
+border-radius: 13px;
+padding: 10px 15px;
+margin: 0 auto;
+cursor: pointer;
+transition: ease-in-out .1s;
+}
+
+.login .login__form form button:hover {
+background: rgb(15, 142, 107);
+cursor: pointer;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 380px) {
+    .login {
+        width: 90%;
+    }
+
+    .login .login__form form input {
+        width: 80%;
+    }
+}
+  
