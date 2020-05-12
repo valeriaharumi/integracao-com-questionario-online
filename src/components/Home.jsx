@@ -66,7 +66,7 @@ const Home = () => {
         "manha": form.manha,
         "tarde": form.tarde,
         "noite": form.noite,
-        "outros": ""
+        "outros": form.outros
     }
 
     // Função acionada quando o formulário e enviado, registra as informações de contato e chama as seguintes 
@@ -85,7 +85,7 @@ const Home = () => {
         if (auxDisponibilidade["noite"]) {
             aux.push("noite")
         }
-        if (auxDisponibilidade["outros"] != "") {
+        if (auxDisponibilidade["outros"] !== "") {
             aux.push(auxDisponibilidade["outros"]);
         }
 
@@ -97,13 +97,13 @@ const Home = () => {
 
         data.records[0].fields["Disponibilidade para contato"] = disponibilidade;
         enviado = true;
-        console.log('data enviar', data.records[0].fields)
+        console.log('DATA:', data.records[0].fields)
     }
 
 
     // funcação de apoio para teste, foi criar pra não acionar o submit do form 
     function clicado() {
-        console.log("form", form)
+        console.log("FORM:", form)
         cadastrar()
     }
 
@@ -126,8 +126,8 @@ const Home = () => {
 
                 <form name="form-Index" id="form-Index">
                     <div className="row">
-
-                        {/* <div id="formSend">
+{/* 
+                        <div id="formSend" >
                                     Seu cadastro foi enviado.<br />
                                 Obrigado!
                                 </div> */}
@@ -354,10 +354,11 @@ const Home = () => {
                                             className="form-check-label">
                                             Outros:</label>
                                         <input
+                                            onChange={handleChange}
                                             className="form-control"
                                             type="text"
                                             name="disp5"
-                                            id="text-input">
+                                            id="outros">
                                         </input>
                                     </div>
                                 </div>
