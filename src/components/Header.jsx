@@ -1,5 +1,5 @@
 import React from 'react'
-import '../estilos/estiloHeader.css'
+import '../css/estiloHeader.css'
 import '../assets/bootstrap/bootstrap.min.css'
 
 function Header() {
