@@ -27,9 +27,10 @@ class Login extends Component {
     handleSubmit = event => {
         event.preventDefault()
         console.log(this.state)
-        Axios.post( 'https://api.airtable.com/v0/appYtQmjCS4p0n2dY/tbll2X6iiQTi0jKCf?api_key=keyfV0AwOq2Pctb5Y&filterByFormula=(AND({Email}="' + this.state.login + '",{Senha}="' + this.state.senha + '"))')
+        Axios.get( 'https://api.airtable.com/v0/appYtQmjCS4p0n2dY/tbll2X6iiQTi0jKCf?api_key=keyfV0AwOq2Pctb5Y&filterByFormula=(AND({Email}="' + this.state.login + '",{Senha}="' + this.state.senha + '"))')
           .then( res => {
-                if(res.length > 0){
+              console.log(res)
+                if(res.data.records.length > 0){
                     window.alert("deu certo")
                     {/* <BrowserRouter>
                         <Switch>
