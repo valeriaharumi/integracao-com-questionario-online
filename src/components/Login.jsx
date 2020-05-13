@@ -12,47 +12,40 @@ class Login extends Component {
         super(props)
     
         this.state = {
-            login: []
-                         
+            login: '',
+            senha: ''                         
         }
     }
 
-    capturaValorLogin = (event) => {
+    capturaValor = (e) => {
         this.setState({
-            login: event.target.value
+            [e.target.name] : e.target.value
         })
     }
 
-    capturaValorSenha = (event) => {
-        this.setState({
-            senha: event.target.value
-        })
-    }
-
+   
     handleSubmit = event => {
-        if(res.records.length > 0){
-            <BrowserRouter>
-                <Switch>
-                    <Route path="/Management" component={Management}/>
-                </Switch>
-            </BrowserRouter>
-        } 
-        else {
-            window.alert("E-mail ou senha incorreto!");
-        }
         event.preventDefault()
+        console.log(this.state)
+        Axios.post( 'https://api.airtable.com/v0/appYtQmjCS4p0n2dY/tbll2X6iiQTi0jKCf?api_key=keyfV0AwOq2Pctb5Y&filterByFormula=(AND({Email}="' + this.state.login + '",{Senha}="' + this.state.senha + '"))')
+          .then( res => {
+                if(res.length > 0){
+                    window.alert("deu certo")
+                    {/* <BrowserRouter>
+                        <Switch>
+                            <Route path="/Management" component={Management}/>
+                        </Switch>
+                    </BrowserRouter> */}
+                } 
+                else {
+                    window.alert("E-mail ou senha incorreto!");
+                } 
+            }
+              
+          )
+        
     }
 
-
-    componentDidMount(){
-        Axios.get('https://api.airtable.com/v0/appYtQmjCS4p0n2dY/tbll2X6iiQTi0jKCf?api_key=keyfV0AwOq2Pctb5Y&')
-        .then(res =>{
-            console.log(res)
-            this.setState({
-                login: {/*filterByFormula=(AND({Email}='academy@cocreare.com.br',{Senha}='123456')) de alguma forma precisa jogar o resultado filtrado numa constante e ver se é um array vazio ou nao*/}
-            })
-        })
-    }
 
     render (){
         const {login, senha} = this.state
@@ -70,13 +63,13 @@ class Login extends Component {
                                 <label htmlFor="email">
                                     <i className="far fa-envelope"></i>
                                 </label>
-                                <input type="text" name="login" value={login} onChange={this.capturaValorLogin}/>
+                                <input type="text" name="login" value={login} onChange={this.capturaValor}/>
                             </div>
                             <div className="login__password">
                                 <label htmlFor="password">
                                     <i className="fas fa-lock"></i>
                                 </label>
-                                <input type="password" name="passwd" value={senha} onChange={this.capturaValorSenha}/>
+                                <input type="password" name="senha" value={senha} onChange={this.capturaValor}/>
                             </div>
 
                             <div className="login__btn">
