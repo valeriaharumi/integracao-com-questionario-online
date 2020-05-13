@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 99%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0px 1px 3px 0px #545454;
+    border-radius: 13px;
+    background: #fff;
+    padding: 10px;
+    font-family: 'open_sanssemibold', sans-serif;
+}
+
+.container .title h3 {
+    color: #30BF97;
+    padding: 10px 0 5px 0;
+    font-family: 'open_sansbold', sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+.container .management__list {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #545454;
+    width: auto;
+    min-height: 100px;
+    margin: 5px 0;
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+}
+
+
+.container .management__list
+.list__name,
+.list__email,
+.list__subject,
+.list__availability__contact {
+    min-width: 120px;
+    width: 10%;
+    word-wrap: break-word;
+    margin: 0 2px;
+    padding: 0 2px;
+}
+
+.container .management__list
+.list__phone {
+    width: 8%;
+    min-width: 50px;
+    word-wrap: break-word;
+    margin: 0 2px;
+    padding: 0 2px;
+}
+
+.container .management__list
+.list__contact__form {
+    min-width: 62px;
+    width: 5%;
+    word-wrap: break-word;
+    margin: 0 2px;
+    padding: 0 2px;
+}
+
+.container .management__list
+.list__content {
+    width: 48%;
+    min-width: 100px;
+    word-wrap: break-word;
+    margin: 0 2px;
+    padding: 0 2px;
+}
+
+.container .pages {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 900px) {
+    .container .management__list {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .container .management__list .list__name,
+    .list__email,
+    .list__availability__contact,
+    .list__subject {
+        margin: 5px;
+        width: 90%;
+    }
+
+    .container .management__list
+    .list__phone {
+        margin: 5px;
+        width: 90%;
+    }
+
+    .container .management__list
+    .list__contact__form {
+        margin: 5px;
+        width: 90%;
+    }
+
+    .container .management__list
+    .list__content {
+        margin: 5px;
+        width: 90%;
+    }
+}

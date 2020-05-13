@@ -1,5 +1,5 @@
 import React from 'react'
-import '../estilos/fontes.css'
+import '../css/fontes.css'
 
 const footer = {
     marginTop: '25px',
