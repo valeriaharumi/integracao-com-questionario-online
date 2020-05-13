@@ -23,8 +23,7 @@ const Home = () => {
         phone: "",
         subject: "",
         msgContent: "",
-        contatoTelefone: "",
-        contatoEmail: "",
+        contato: "",
         comercial: "",
         manha: "",
         tarde: "",
@@ -57,7 +56,13 @@ const Home = () => {
             ...form,
             [event.target.id]: event.target.value
         });
+    }
 
+    function handleChangeContact(event){
+        setForm({
+            ...form,
+            [event.target.name]: event.target.id
+            });
     }
 
     // Auxiliar para preenchimento da funçao data, informações opcionais 
@@ -97,15 +102,14 @@ const Home = () => {
 
         data.records[0].fields["Disponibilidade para contato"] = disponibilidade;
         enviado = true;
-        console.log('DATA:', data.records[0].fields)
+        postData(data)
     }
 
 
     // funcação de apoio para teste, foi criar pra não acionar o submit do form 
-    function clicado() {
-        console.log("FORM:", form)
-        cadastrar()
-    }
+    // function clicado() {
+    //     cadastrar()
+    // }
 
 
     // -----------Renderização da página---------------
@@ -116,7 +120,7 @@ const Home = () => {
             <div className="main--content">
 
 
-                <h2 >Novo Cadastro</h2>
+                <h2 className="mainNovo" >Novo Cadastro</h2>
 
                 <hr></hr>
 
@@ -124,7 +128,7 @@ const Home = () => {
                 <div className="message"></div>
 
 
-                <form name="form-Index" id="form-Index">
+                <form name="form-Index" id="form-Index" onSubmit={cadastrar}>
                     <div className="row">
 {/* 
                         <div id="formSend" >
@@ -263,11 +267,11 @@ const Home = () => {
                                 {/* -----------------------------------Opções de contato: email e telefone --> */}
 
 
-                                <div className="form-check">
+                                <div className="form-check" id="preferencia">
                                     <input
-                                        onChange={handleChange}
+                                        onChange={handleChangeContact}
                                         type="radio"
-                                        name="conta"
+                                        name="contato"
                                         id="contatoEmail"
                                         className="form-check-input"
                                         value="contatoEmail" />
@@ -277,9 +281,9 @@ const Home = () => {
 
                                 <div className="form-check">
                                     <input
-                                        onChange={handleChange}
+                                        onChange={handleChangeContact}
                                         type="radio"
-                                        name="conta"
+                                        name="contato"
                                         id="contatoTelefone"
                                         className="form-check-input"
                                         value="contatoTelefone" />
@@ -367,8 +371,6 @@ const Home = () => {
 
                             {/* -----------------------------------Botoes para enviar e cancelar --> */}
                             <div id="buttons">
-
-                                <div onClick={clicado}>TESTE</div>
 
                                 <button type="reset"
                                     className="btn cancel--button">Cancelar

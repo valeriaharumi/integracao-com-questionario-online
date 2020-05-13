@@ -76,7 +76,20 @@ function Sobre() {
                     <h1>Sobre</h1>
                 </div>
                 <div className="content__principal--text text-center">
-                    <p>COLOCAR INFORMAÇÕES AQUI
+                <p>COLOCAR INFORMAÇÕES AQUI
+                    </p>
+
+                    <p>Somos a 4-Front! Uma equipe composta por cinco integrantes que estão em busca de novos
+                        conhecimentos e desafios profissionais.
+                    </p>
+                    <p> Cada integrante tem suas habilidades e áreas de especialidade, e unidos formamos um time
+                        capacitado
+                        para desenvolvimento web completo,
+                        contemplando desde o design da interface até toda a programação Front-End.
+                    </p>
+                    <p>
+                        Fazemos aplicação de HTML, CSS e JavaScript puros ou
+                        com os frameworks Bootstrap, Angular e React
                     </p>
 
                 </div>
@@ -88,7 +101,10 @@ function Sobre() {
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-12 col-sm-12 col-lg-12">
-                            <h2 className="content__principal--title">Nossa Equipe</h2>
+                            <div className="content__principal--title">
+                                <h2 >Nossa Equipe</h2>
+                            </div>
+                            
                         </div>
                     </div>
 
