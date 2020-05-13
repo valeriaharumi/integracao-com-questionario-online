@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import Axios from 'axios'
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import Management from './Management'
 
 import '../css/login.css'
 import '../assets/bootstrap/bootstrap.min.css'
-
-
-
-
 
 class Login extends Component {
 
@@ -13,9 +12,8 @@ class Login extends Component {
         super(props)
     
         this.state = {
-            login: '',
-            senha: '',
-             
+            login: []
+                         
         }
     }
 
@@ -32,8 +30,28 @@ class Login extends Component {
     }
 
     handleSubmit = event => {
-        console.log(this.state.login)
+        if(res.records.length > 0){
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/Management" component={Management}/>
+                </Switch>
+            </BrowserRouter>
+        } 
+        else {
+            window.alert("E-mail ou senha incorreto!");
+        }
         event.preventDefault()
+    }
+
+
+    componentDidMount(){
+        Axios.get('https://api.airtable.com/v0/appYtQmjCS4p0n2dY/tbll2X6iiQTi0jKCf?api_key=keyfV0AwOq2Pctb5Y&')
+        .then(res =>{
+            console.log(res)
+            this.setState({
+                login: {/*filterByFormula=(AND({Email}='academy@cocreare.com.br',{Senha}='123456')) de alguma forma precisa jogar o resultado filtrado numa constante e ver se é um array vazio ou nao*/}
+            })
+        })
     }
 
     render (){
@@ -64,7 +82,6 @@ class Login extends Component {
                             <div className="login__btn">
                                 <button type="submit">Acessar</button>
                             </div>
-
                         </form>
                     </div>
                 </div>
