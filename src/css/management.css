@@ -1,4 +1,4 @@
-.container {
+.container.management {
     display: flex;
     flex-direction: column;
     max-width: 99%;
