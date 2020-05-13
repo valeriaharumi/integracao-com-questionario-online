@@ -3,14 +3,72 @@ import React from 'react'
 import '../css/sobre.css';
 import '../assets/bootstrap/bootstrap.min.css'
 
-import foto from '../assets/img/foto.png';
 
+const team = [
+    {nome: "Benicio",
+    foto: require("../assets/img/benicio.jpg"),
+    email: "",
+    github: "https://github.com/ChernoBeni",
+    linkedin: "",
+},
+    {nome: "Carlos",
+    foto: require("../assets/img/carlos.jpg"),
+    email: "carlinhos.ars@gmail.com",
+    github: "https://github.com/ribeiro-carlos/",
+    linkedin: "https://www.linkedin.com/in/carlos-ribeirosilva/",
+},
+    {nome: "Fabricio",
+    foto: require("../assets/img/fabricio.jpg"),
+    email: "santocardoso370@gmail.com", 
+    github: "https://github.com/Fabricio-alt",
+    linkedin: "",
+},
+    {nome: "Valéria",
+    foto: require("../assets/img/valeria.jpg"),
+    email: "haruumi.nishimura@gmail.com",
+    github: "https://github.com/valeriaharumi",
+    linkedin: "https://www.linkedin.com/in/val%C3%A9ria-harumi-nishimura-1574191a2/",
+},
+    {nome: "Wesley",
+    foto: require("../assets/img/wesley.jpg"),
+    email: "wesleycamara@hotmail.com.br",
+    github: "https://github.com/WesleyCamara",
+    linkedin: "https://www.linkedin.com/in/wesleycamara/",
+}
+]
+
+
+// Gera os cards com as informações dos membros da equipe 
+const equipe = team.map(item =>(
+
+    <div key={item.nome} className="col-sm-auto col-md-auto">
+        <div className="team-member">
+            <img className="mx-auto rounded-circle" src={item.foto}
+                
+                alt=""/>
+            <h4>{item.nome}</h4>
+            <p></p>
+            <div className="contact-members">
+                <a href="mailto:{item.email}"> <i className="fas fa-at"></i></a>
+                <a href={item.github} target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                <a href={item.linkedin} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    ))
+
+    
 
 
 function Sobre() {
     return <div id="page">
     <div className="container">
         <div className="content--principal">
+
+            
 
             {/* <!-- INICIO SESSÃO-SOBRE --> */}
             <section className="sobre col-sm-12 col-lg-12">
@@ -36,71 +94,8 @@ function Sobre() {
 
                     <div className="row members">
 
-                        <div className="col-sm-auto col-md-auto">
-                            <div className="team-member">
-                                <img className="mx-auto rounded-circle" src={foto}
-                                    alt=""/>
-                                <h4>Benicio</h4>
-                                
-                                <div className="contact-members">
-                                    <a href="#"> <i className="fas fa-at"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        {equipe}
 
-                        <div className="col-sm-auto col-md-auto">
-                            <div className="team-member">
-                                <img className="mx-auto rounded-circle" src={foto}
-                                    alt=""/>
-                                <h4>Carlos</h4>
-                                <div className="contact-members">
-                                    <a href="#"> <i className="fas fa-at"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-auto col-md-auto">
-                            <div className="team-member">
-                                <img className="mx-auto rounded-circle" src={foto}
-                                    alt=" "/>
-                                <h4>Fabricio</h4>
-                                <div className="contact-members">
-                                    <a href="#"> <i className="fas fa-at"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-auto col-md-auto">
-                            <div className="team-member">
-                                <img className="mx-auto rounded-circle" src={foto}
-                                    alt=""/>
-                                <h4>Valeria</h4>
-                                <div className="contact-members">
-                                    <a href="#"> <i className="fas fa-at"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-auto col-md-auto">
-                            <div className="team-member">
-                                <img className="mx-auto rounded-circle" src={foto}
-                                    alt=" "/>
-                                <h4>Wesley</h4>
-                                <div className="contact-members">
-                                    <a href="#"> <i className="fas fa-at"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="col-sm-12 col-lg-12 desc-projeto">
