@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import Axios from 'axios';
 
 import '../css/home.css';
 import '../assets/bootstrap/bootstrap.min.css'
@@ -12,7 +12,7 @@ const Home = () => {
 
     // Faz o chamado post passando como body os dados preenchidos na tabela
     const postData = (body) => {
-        axios.post("https://api.airtable.com/v0/appYtQmjCS4p0n2dY/Question%C3%A1rio?api_key=keyfV0AwOq2Pctb5Y", body
+        Axios.post("https://api.airtable.com/v0/appYtQmjCS4p0n2dY/Question%C3%A1rio?api_key=keyfV0AwOq2Pctb5Y", body
         )
     }
 
