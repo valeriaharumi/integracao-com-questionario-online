@@ -5,7 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Sobre from './components/Sobre'
-import Login from './components/Login';
+import Login, {PrivateRoute} from './components/Login';
+import Management from './components/Management'
 
 
 
@@ -15,11 +16,13 @@ ReactDOM.render(
   <div>    
     <Header/>
       <BrowserRouter>
-        <Switch>
+        
           <Route path="/" exact={true} component={Home}/>
           <Route path="/sobre" component={Sobre}/>
           <Route path="/login" component={Login}/>
-        </Switch>
+          <PrivateRoute path="/logado" component={Management}/>
+
+        
       </BrowserRouter>
     <Footer/>
   </div>  
