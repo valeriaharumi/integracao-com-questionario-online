@@ -32,6 +32,7 @@ const Home = () => {
 
     });
 
+
     // constante com o conteúdo que será enviado pela API 
     const data = {
         "records": [
@@ -102,15 +103,19 @@ const Home = () => {
 
         data.records[0].fields["Disponibilidade para contato"] = disponibilidade;
         enviado = true;
+        
         postData(data)
     }
 
 
-    // funcação de apoio para teste, foi criar pra não acionar o submit do form 
-    // function clicado() {
-    //     cadastrar()
-    // }
+  
+    
 
+
+//     (<div id="formSend" >
+//     Seu cadastro foi enviado.<br />
+// Obrigado!
+// </div>)
 
     // -----------Renderização da página---------------
 
@@ -130,12 +135,9 @@ const Home = () => {
 
                 <form name="form-Index" id="form-Index" onSubmit={cadastrar}>
                     <div className="row">
-{/* 
-                        <div id="formSend" >
-                                    Seu cadastro foi enviado.<br />
-                                Obrigado!
-                                </div> */}
 
+                 
+                        
                         <div className="col-sm-12 col-md-12 col-lg-6">
                             <div className="form--content form-group">
 
@@ -151,20 +153,17 @@ const Home = () => {
                                     type="text"
                                     name="name" id="name"
                                     minLength="3" placeholder="João da Silva" required />
-
+                                    
 
                                 {/* <div className="alert alert-danger">
+                                    <div>
+                                        Nome é necessário
+                                    </div>
 
-
-
-                    <div>
-                        Nome é necessário
-                                                </div>
-
-                    <div>
-                        O nome deve ter no mínimo 3 caracteres.
-                                                </div>
-                </div> */}
+                                     <div>
+                                         O nome deve ter no mínimo 3 caracteres.
+                                    </div>
+                                </div> */}
                                 {/* ----------------------------------------------------------------------------------------------------------------
                                     Area do email
         --------------------------------------------------------------------------------------------------------------- */}
