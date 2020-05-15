@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b63fb17d.chunk.css",
+    "main.js": "/static/js/main.fe1c4112.chunk.js",
+    "main.js.map": "/static/js/main.fe1c4112.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.926580ec.js",
+    "runtime-main.js.map": "/static/js/runtime-main.926580ec.js.map",
+    "static/js/2.d5276370.chunk.js": "/static/js/2.d5276370.chunk.js",
+    "static/js/2.d5276370.chunk.js.map": "/static/js/2.d5276370.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c0390d04f28425e8e7da440b9fe4383c.js": "/precache-manifest.c0390d04f28425e8e7da440b9fe4383c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b63fb17d.chunk.css.map": "/static/css/main.b63fb17d.chunk.css.map",
+    "static/js/2.d5276370.chunk.js.LICENSE.txt": "/static/js/2.d5276370.chunk.js.LICENSE.txt",
+    "static/media/benicio.jpg": "/static/media/benicio.77fbff5f.jpg",
+    "static/media/carlos.jpg": "/static/media/carlos.02bd0321.jpg",
+    "static/media/fabricio.jpg": "/static/media/fabricio.c76da18c.jpg",
+    "static/media/fontes.css": "/static/media/opensans-semibold-webfont.f93f145d.woff",
+    "static/media/valeria.jpg": "/static/media/valeria.dbb8c339.jpg",
+    "static/media/wesley.jpg": "/static/media/wesley.4c47844c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.926580ec.js",
+    "static/js/2.d5276370.chunk.js",
+    "static/css/main.b63fb17d.chunk.css",
+    "static/js/main.fe1c4112.chunk.js"
+  ]
+}
