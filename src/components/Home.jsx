@@ -8,7 +8,7 @@ import '../assets/bootstrap/bootstrap.min.css'
 const Home = () => {
 
     // Variavel de apoio para mudar o comportamento depois do envio do formulário
-    let enviado = false;
+    // let enviado = false;
 
     // Faz o chamado post passando como body os dados preenchidos na tabela
     const postData = (body) => {
@@ -102,7 +102,7 @@ const Home = () => {
         }
 
         data.records[0].fields["Disponibilidade para contato"] = disponibilidade;
-        enviado = true;
+        // enviado = true;
         
         postData(data)
     }
