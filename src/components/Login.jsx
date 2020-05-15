@@ -6,7 +6,6 @@ import Management from './Management'
 import '../css/login.css'
 import '../assets/bootstrap/bootstrap.min.css'
 
-
 class Login extends Component {
 
     constructor(props) {
@@ -47,6 +46,7 @@ class Login extends Component {
         )
         
     };
+
 
 
     render (){
