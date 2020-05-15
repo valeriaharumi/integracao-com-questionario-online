@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Management from './Management'
 
 import '../css/login.css'
@@ -25,7 +25,7 @@ class Login extends Component {
         })
     }
 
-    
+
 
        
     handleSubmit = event => {
@@ -35,6 +35,7 @@ class Login extends Component {
           .then( res => {
               console.log(res)
                if (res.data.records.length > 0){
+                window.sessionStorage.setItem('login', 'true');
                 this.setState({ path: true })
                 }                      
                 else {
@@ -49,15 +50,11 @@ class Login extends Component {
     };
 
 
+
     render (){
         const {login, senha} = this.state
-        if (this.state.path){
-            return (<BrowserRouter>
-                        <Switch>                            
-                            <Redirect to="/management" component={Management}/>
-                        </Switch>
-                    </BrowserRouter>
-            )
+        if (this.state.path && window.sessionStorage.getItem('login') === 'true'){
+            return (<Redirect to="/management" component={Management}/>)
         } else {
             return(
             
@@ -100,3 +97,5 @@ class Login extends Component {
 }
 
 export default Login
+
+

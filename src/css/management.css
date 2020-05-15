@@ -1,4 +1,4 @@
-.container.management {
+.container-management{
     display: flex;
     flex-direction: column;
     max-width: 99%;
@@ -76,6 +76,29 @@
     margin: 0 auto;
     padding-top: 20px;
 }
+
+
+.paginação{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    
+}
+
+.paginação div, .paginação p{
+    margin: 5px;
+    padding: 7px;
+    min-width: 35px;
+    margin-top: 10px;
+}
+
+.paginação div:hover, .paginação p:hover{
+    background-color: #2298EC;
+    color: aliceblue;
+}
+
+
 
 
 /* MOBILE */

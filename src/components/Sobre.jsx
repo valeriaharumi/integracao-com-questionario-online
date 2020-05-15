@@ -5,6 +5,18 @@ import '../assets/bootstrap/bootstrap.min.css'
 
 
 const team = [
+    {nome: "Valéria",
+    foto: require("../assets/img/valeria.jpg"),
+    email: "haruumi.nishimura@gmail.com",
+    github: "https://github.com/valeriaharumi",
+    linkedin: "https://www.linkedin.com/in/val%C3%A9ria-harumi-nishimura-1574191a2/",
+},
+    {nome: "Wesley",
+    foto: require("../assets/img/wesley.jpg"),
+    email: "wesleycamara@hotmail.com.br",
+    github: "https://github.com/WesleyCamara",
+    linkedin: "https://www.linkedin.com/in/wesleycamara/",
+},
     {nome: "Benicio",
     foto: require("../assets/img/benicio.jpg"),
     email: "",
@@ -22,18 +34,6 @@ const team = [
     email: "santocardoso370@gmail.com", 
     github: "https://github.com/Fabricio-alt",
     linkedin: "",
-},
-    {nome: "Valéria",
-    foto: require("../assets/img/valeria.jpg"),
-    email: "haruumi.nishimura@gmail.com",
-    github: "https://github.com/valeriaharumi",
-    linkedin: "https://www.linkedin.com/in/val%C3%A9ria-harumi-nishimura-1574191a2/",
-},
-    {nome: "Wesley",
-    foto: require("../assets/img/wesley.jpg"),
-    email: "wesleycamara@hotmail.com.br",
-    github: "https://github.com/WesleyCamara",
-    linkedin: "https://www.linkedin.com/in/wesleycamara/",
 }
 ]
 
@@ -76,9 +76,6 @@ function Sobre() {
                     <h1>Sobre</h1>
                 </div>
                 <div className="content__principal--text text-center">
-                <p>COLOCAR INFORMAÇÕES AQUI
-                    </p>
-
                     <p>Somos a 4-Front! Uma equipe composta por cinco integrantes que estão em busca de novos
                         conhecimentos e desafios profissionais.
                     </p>

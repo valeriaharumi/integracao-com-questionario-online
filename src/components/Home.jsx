@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import Axios from 'axios';
 
 import '../css/home.css';
 import '../assets/bootstrap/bootstrap.min.css'
@@ -8,11 +8,11 @@ import '../assets/bootstrap/bootstrap.min.css'
 const Home = () => {
 
     // Variavel de apoio para mudar o comportamento depois do envio do formulário
-    let enviado = false;
+    // let enviado = false;
 
     // Faz o chamado post passando como body os dados preenchidos na tabela
     const postData = (body) => {
-        axios.post("https://api.airtable.com/v0/appYtQmjCS4p0n2dY/Question%C3%A1rio?api_key=keyfV0AwOq2Pctb5Y", body
+        Axios.post("https://api.airtable.com/v0/appYtQmjCS4p0n2dY/Question%C3%A1rio?api_key=keyfV0AwOq2Pctb5Y", body
         )
     }
 
@@ -31,6 +31,7 @@ const Home = () => {
         outros: ""
 
     });
+
 
     // constante com o conteúdo que será enviado pela API 
     const data = {
@@ -101,16 +102,20 @@ const Home = () => {
         }
 
         data.records[0].fields["Disponibilidade para contato"] = disponibilidade;
-        enviado = true;
+        // enviado = true;
+        
         postData(data)
     }
 
 
-    // funcação de apoio para teste, foi criar pra não acionar o submit do form 
-    // function clicado() {
-    //     cadastrar()
-    // }
+  
+    
 
+
+//     (<div id="formSend" >
+//     Seu cadastro foi enviado.<br />
+// Obrigado!
+// </div>)
 
     // -----------Renderização da página---------------
 
@@ -130,12 +135,9 @@ const Home = () => {
 
                 <form name="form-Index" id="form-Index" onSubmit={cadastrar}>
                     <div className="row">
-{/* 
-                        <div id="formSend" >
-                                    Seu cadastro foi enviado.<br />
-                                Obrigado!
-                                </div> */}
 
+                 
+                        
                         <div className="col-sm-12 col-md-12 col-lg-6">
                             <div className="form--content form-group">
 
@@ -151,20 +153,17 @@ const Home = () => {
                                     type="text"
                                     name="name" id="name"
                                     minLength="3" placeholder="João da Silva" required />
-
+                                    
 
                                 {/* <div className="alert alert-danger">
+                                    <div>
+                                        Nome é necessário
+                                    </div>
 
-
-
-                    <div>
-                        Nome é necessário
-                                                </div>
-
-                    <div>
-                        O nome deve ter no mínimo 3 caracteres.
-                                                </div>
-                </div> */}
+                                     <div>
+                                         O nome deve ter no mínimo 3 caracteres.
+                                    </div>
+                                </div> */}
                                 {/* ----------------------------------------------------------------------------------------------------------------
                                     Area do email
         --------------------------------------------------------------------------------------------------------------- */}
