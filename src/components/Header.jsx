@@ -9,7 +9,7 @@ function Header() {
                 <div className='container'>
                     {/*Logo da equipe do lado esquerdo*/}
                     {/*link para pag home*/}
-                    <a id="link-brand" className="navbar-brand" href="index.js">4-Front</a>
+                    <a id="link-brand" className="navbar-brand" href="/">4-Front</a>
 
                     {/*Menu de navegação*/}
                     <div className="global-menu">

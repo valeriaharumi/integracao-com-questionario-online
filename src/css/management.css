@@ -78,6 +78,29 @@
 }
 
 
+.paginação{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    
+}
+
+.paginação div, .paginação p{
+    margin: 5px;
+    padding: 7px;
+    min-width: 35px;
+    margin-top: 10px;
+}
+
+.paginação div:hover, .paginação p:hover{
+    background-color: #2298EC;
+    color: aliceblue;
+}
+
+
+
+
 /* MOBILE */
 @media only screen and (max-width: 900px) {
     .container .management__list {
