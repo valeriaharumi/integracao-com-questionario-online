@@ -12,8 +12,7 @@ export default class Management extends Component {
     listagem: ''
   }
 
-
-
+// Faz a busca dos dados quando carrega o componente 
   componentDidMount() {
     this.buscaApi()
   }
@@ -27,7 +26,7 @@ export default class Management extends Component {
 
 
 
-
+//  Renderiza os itens da lista 
   render() {
     return (
 
