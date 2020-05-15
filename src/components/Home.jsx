@@ -79,7 +79,8 @@ const [send, setSend] = useState({
     }
 
     // Função acionada quando o formulário e enviado, registra as informações de contato e chama as seguintes 
-    function cadastrar() {
+    function cadastrar(event) {
+        event.preventDefault()
         let aux = []
 
         if (auxDisponibilidade["comercial"]) {
