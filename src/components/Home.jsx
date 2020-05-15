@@ -7,8 +7,11 @@ import '../assets/bootstrap/bootstrap.min.css'
 
 const Home = () => {
 
-    // Variavel de apoio para mudar o comportamento depois do envio do formulário
-    // let enviado = false;
+const [send, setSend] = useState({
+    sendStyle: {display: "none"},
+    formStyle: {display: "block"}
+})
+
 
     // Faz o chamado post passando como body os dados preenchidos na tabela
     const postData = (body) => {
@@ -59,11 +62,11 @@ const Home = () => {
         });
     }
 
-    function handleChangeContact(event){
+    function handleChangeContact(event) {
         setForm({
             ...form,
             [event.target.name]: event.target.id
-            });
+        });
     }
 
     // Auxiliar para preenchimento da funçao data, informações opcionais 
@@ -103,19 +106,22 @@ const Home = () => {
 
         data.records[0].fields["Disponibilidade para contato"] = disponibilidade;
         // enviado = true;
-        
+
+        setSend({
+            sendStyle: {display: "block"},
+            formStyle: {display: "none"}
+        })
+
         postData(data)
     }
 
 
-  
-    
 
 
-//     (<div id="formSend" >
-//     Seu cadastro foi enviado.<br />
-// Obrigado!
-// </div>)
+
+
+
+
 
     // -----------Renderização da página---------------
 
@@ -125,7 +131,12 @@ const Home = () => {
             <div className="main--content">
 
 
-                <h2 className="mainNovo" >Novo Cadastro</h2>
+                <h2 className="mainNovo" style={send.formStyle}>Novo Cadastro</h2>
+
+                <div id="formSend" style={send.sendStyle}>
+                    Seu cadastro foi enviado.<br />
+                    Obrigado!
+                </div>
 
                 <hr></hr>
 
@@ -133,11 +144,11 @@ const Home = () => {
                 <div className="message"></div>
 
 
-                <form name="form-Index" id="form-Index" onSubmit={cadastrar}>
+                <form name="form-Index" id="form-Index" onSubmit={cadastrar} style={send.formStyle}>
                     <div className="row">
 
-                 
-                        
+
+
                         <div className="col-sm-12 col-md-12 col-lg-6">
                             <div className="form--content form-group">
 
@@ -153,7 +164,7 @@ const Home = () => {
                                     type="text"
                                     name="name" id="name"
                                     minLength="3" placeholder="João da Silva" required />
-                                    
+
 
                                 {/* <div className="alert alert-danger">
                                     <div>

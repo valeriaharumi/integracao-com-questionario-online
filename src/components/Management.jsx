@@ -52,11 +52,7 @@ export default class Management extends Component {
 
 
   nextPage = () => {
-
     if (this.state.pagina < (this.state.listagem.length - 1)) {
-      console.log('tamanho', this.state.listagem.length)
-      console.log('pagina', this.state.pagina)
-
       this.setState({ lista: this.state.listagem[this.state.pagina] })
       this.setState({ pagina: this.state.pagina + 1 })
     }
@@ -68,7 +64,6 @@ export default class Management extends Component {
     }
 
     if (this.state.pagina > 0) {
-
       this.setState({ pagina: (this.state.pagina - 1) })
       this.setState({ lista: this.state.listagem[this.state.pagina] })
 
@@ -119,12 +114,12 @@ export default class Management extends Component {
             ))
             }
           </tbody>
-           
-           
-            <div className="paginação">
-              <div onClick={this.previousPage}>Pagina Anterior</div>
-              <p>{this.state.pagina +1}</p>
-              <div onClick={this.nextPage}>Proxima Página</div>
+
+
+          <div className="paginação">
+            <div onClick={this.previousPage}>Pagina Anterior</div>
+            <p>{this.state.pagina + 1}</p>
+            <div onClick={this.nextPage}>Proxima Página</div>
           </div>
         </table>
 

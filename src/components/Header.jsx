@@ -13,9 +13,9 @@ function Header() {
 
                     {/*Menu de navegação*/}
                     <div className="global-menu">
-                        <a href='/'>Home</a>                        
-                        <a href='sobre'>Sobre</a>                        
-                        <a className='login' href='login'>Login</a>                        
+                        <a href='/'>Home</a>
+                        <a href='sobre'>Sobre</a>
+                        <a className='login' href='login'>Login</a>
                     </div>
                 </div>
             </nav>
