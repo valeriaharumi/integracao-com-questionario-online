@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 
-import '../css/home.css';
+import '../css/index.css';
 import '../assets/bootstrap/bootstrap.min.css'
 
 
